@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="loader.css" />
+    <title>currency converter</title>
+  </head>
+  <body>
+    <div class="loader-container">
+      <div class="loader"></div>
+    </div>
+    <div class="container">
+      <header class="header-section">
+        <img src="logo.png" class="logo">
+        <div class="heading">currency converter</div>
+      </header>
+      <main class="main-section">
+        <input class="value-input" type="text" placeholder="enter value" />
+        <select name="" id="currency-selector">
+          <option value="eur">EUR</option>
+          <option value="usd">USD</option>
+          <option value="chf">CHF</option>
+        </select>
+      </main>
+      <button class="convert-button">convert</button>
+      <div class="output"></div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
