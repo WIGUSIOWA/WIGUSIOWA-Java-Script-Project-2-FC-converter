@@ -1,3 +1,5 @@
+/* mobile & tablet size */
+
 * {
   margin: 0;
   padding: 0;
@@ -11,14 +13,15 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 .container {
   height: 300px;
   width: 300px;
   padding: 30px;
-  border:2px solid     rgb(15, 18, 43);
+  border: 2px solid rgb(15, 18, 43);
   border-radius: 25px 0 25px 0;
   background-color: #678d32;
   display: flex;
@@ -26,21 +29,13 @@ body {
   align-items: center;
   flex-direction: column;
 }
-/* 
-header {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-} */
 
-main {
+.main-section {
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-
 
 .output {
   height: 50px;
@@ -63,19 +58,29 @@ main {
   align-items: center;
   text-align: center;
   font-weight: 600;
-  color:ivory;
+  color: ivory;
 }
 
 .convert-button {
   width: 50%;
   height: 30px;
-  background-color:rgb(15, 18, 43);
+  background-color: rgb(15, 18, 43);
   color: ivory;
 }
 
-/* @media screen and(min-width: 1024px){
-  .container{
-    width: 50%;
+/* computer size */
+
+@media screen and (min-width: 1025px) {
+  .container {
+    width: 50vw;
+    font-size: 30px;
+    background-color: #7399a3;
   }
 
-} */
+  .header-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
