@@ -9,13 +9,16 @@
   top: 0;
   left: 0;
 }
+
 .loader {
   width: 48px;
   height: 48px;
   border-radius: 50%;
   position: relative;
-  animation: rotate 10s linear infinite;
+  animation: rotate 1s linear infinite;
+  animation-duration: 1s;
 }
+
 .loader::before {
   content: "";
   box-sizing: border-box;
@@ -23,7 +26,7 @@
   inset: 0px;
   border-radius: 50%;
   border: 5px solid #fff;
-  animation: prixClipFix 4s linear infinite;
+  animation: prixClipFix 2s linear infinite;
 }
 
 @keyframes rotate {
