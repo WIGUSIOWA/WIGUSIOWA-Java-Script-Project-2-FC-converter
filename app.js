@@ -37,6 +37,26 @@ const onConvertClick = async (event) => {
   const exchange = data?.rates?.[0]?.mid;
   const userInput = valueInput.value;
 
+  if (
+    !isNaN(userInput) &&
+    userInput.trim() !== "" &&
+    parseFloat(userInput) !== 0 &&
+    exchange > 0
+  ) {
+    output.textContent = `${(userInput * exchange).toFixed(2)} PLN`;
+  } else {
+    alert("Wrong input.");
+  }
+  if (
+    !isNaN(userInput) &&
+    userInput.trim() !== "" &&
+    parseFloat(userInput) !== 0
+  ) {
+    output.textContent = `${(userInput * exchange).toFixed(2)} PLN`;
+  } else {
+    alert("Wrong input.");
+  }
+
   if (!exchange) {
     alert("An error occurred while fetching the data, please try later.");
     return;
