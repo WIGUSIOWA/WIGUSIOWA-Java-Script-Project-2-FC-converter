@@ -23,7 +23,7 @@ body {
   padding: 30px;
   border: 2px solid rgb(15, 18, 43);
   border-radius: 25px 0 25px 0;
-  background-color: #4a7db0df;
+  background-color: #9aadb0df;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -60,7 +60,7 @@ body {
   align-items: center;
   text-align: center;
   font-weight: 600;
-  color: ivory;
+  color: rgb(15, 18, 43);
 }
 
 .convert-button {
@@ -85,5 +85,9 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+  }
+  .heading {
+    color: ivory;
+    font-weight: 400;
   }
 }
