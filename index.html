@@ -13,11 +13,21 @@
     </div>
     <div class="container">
       <header class="header-section">
-        <img src="logo.png" class="logo" />
+        <img src="wolf250.jpg" class="logo" />
         <div class="heading">currency converter</div>
       </header>
       <main class="main-section">
-        <input class="value-input" type="text" placeholder="enter value" />
+        <form id="value-form" action="">
+          <input
+            class="value-input"
+            type="text"
+            id="value-input"
+            placeholder="enter value"
+            required
+            min="0.01"
+            step="0.01"
+          />
+        </form>
         <select name="" id="currency-selector">
           <option value="eur">EUR</option>
           <option value="usd">USD</option>
