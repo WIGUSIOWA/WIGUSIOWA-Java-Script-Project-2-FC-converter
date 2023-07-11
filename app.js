@@ -3,7 +3,6 @@ const currencySelector = document.querySelector("#currency-selector");
 const valueForm = document.querySelector("#value-form");
 const output = document.querySelector(".output");
 const loader = document.querySelector(".loader-container");
-const convertButton = document.querySelector(".convert-button");
 
 const loaderHandler = (val) => {
   loader.style.display = val;
@@ -13,7 +12,7 @@ const getData = async (curr) => {
   try {
     loaderHandler("flex");
     const res = await fetch(
-      `http://api.nbp.pl/api/exchangerates/rates/a/${curr}/`
+      `https://api.nbp.pl/api/exchangerates/rates/a/${curr}/`
     );
     const data = await res.json();
     loaderHandler("none");
@@ -55,4 +54,3 @@ valueInput.addEventListener("input", () => {
 });
 
 valueForm.addEventListener("submit", onConvertClick);
-convertButton.addEventListener("click", onConvertClick);
