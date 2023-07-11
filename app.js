@@ -13,7 +13,7 @@ const getData = async (curr) => {
   try {
     loaderHandler("flex");
     const res = await fetch(
-      `http://api.nbp.pl/api/exchangerates/rates/a/${curr}/today`
+      `http://api.nbp.pl/api/exchangerates/rates/a/${curr}/`
     );
     const data = await res.json();
     loaderHandler("none");
@@ -27,40 +27,23 @@ const getData = async (curr) => {
 
 const onConvertClick = async (event) => {
   event.preventDefault();
+  const userInput = valueInput.value;
 
-  if (!valueForm.checkVisibility()) {
-    alert("Please, enter a valid value.");
-    return;
+  if (
+    isNaN(userInput) ||
+    userInput.trim() === "" ||
+    parseFloat(userInput) === 0
+  ) {
+    return alert("Wrong input.");
   }
 
   const data = await getData(currencySelector.value);
   const exchange = data?.rates?.[0]?.mid;
-  const userInput = valueInput.value;
 
   if (!exchange) {
     alert("An error occurred while fetching the data, please try later.");
-  }
-
-  if (
-    !isNaN(userInput) &&
-    userInput.trim() !== "" &&
-    parseFloat(userInput) !== 0 &&
-    exchange > 0
-  ) {
-    output.textContent = `${(userInput * exchange).toFixed(2)} PLN`;
   } else {
-    alert("Wrong input.");
-  }
-
-  if (!exchange) {
-    alert("An error occurred while fetching the data, please try later.");
-    return;
-  }
-
-  if (!isNaN(userInput) && parseFloat(userInput) !== 0) {
     output.textContent = `${(userInput * exchange).toFixed(2)} PLN`;
-  } else {
-    alert("Wrong input.");
   }
 };
 
