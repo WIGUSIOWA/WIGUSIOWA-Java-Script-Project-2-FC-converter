@@ -75,6 +75,10 @@ body {
 /* computer size */
 
 @media screen and (min-width: 1025px) {
+  html {
+    background-color: rgb(15, 18, 43);
+  }
+
   .container {
     width: 50vw;
     font-size: 30px;
@@ -87,6 +91,7 @@ body {
     justify-content: space-around;
     align-items: center;
   }
+
   .heading {
     color: ivory;
     font-weight: 400;
