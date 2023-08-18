@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="loader.css" />
-    <title>currency converter</title>
-  </head>
-  <body>
-    <div class="loader-container">
-      <div class="loader"></div>
-    </div>
-    <div class="container">
-      <header class="header-section">
-        <img src="wolf250.jpg" class="logo" />
-        <div class="heading">currency converter</div>
-      </header>
-      <main class="main-section">
-        <form id="value-form" action="">
-          <input
-            class="value-input"
-            type="text"
-            id="value-input"
-            placeholder="enter value"
-            required
-            min="0.01"
-            step="0.01"
-          />
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="loader.css" />
+		<title>currency converter</title>
+	</head>
+	<body>
+		<div class="loader-container">
+			<div class="loader"></div>
+		</div>
+		<div class="container">
+			<header class="header-section">
+				<img src="wolf250.jpg" class="logo" />
+				<div class="heading">currency converter</div>
+			</header>
+			<main class="main-section">
+				<form id="value-form" action="">
+					<input
+						class="value-input"
+						type="text"
+						id="value-input"
+						placeholder="enter value"
+						required
+						min="0.01"
+						step="0.01"
+					/>
 
-          <select name="" id="currency-selector">
-            <option value="eur">EUR</option>
-            <option value="usd">USD</option>
-            <option value="chf">CHF</option>
-          </select>
+					<select name="" id="currency-selector">
+						<option value="eur">EUR</option>
+						<option value="usd">USD</option>
+						<option value="chf">CHF</option>
+					</select>
 
-          <button class="convert-button">convert</button>
-        </form>
-      </main>
-      <div class="output"></div>
-    </div>
-    <script src="app.js"></script>
-  </body>
+					<button class="convert-button">convert</button>
+				</form>
+			</main>
+			<div class="output"></div>
+		</div>
+		<script src="app.js"></script>
+	</body>
 </html>
